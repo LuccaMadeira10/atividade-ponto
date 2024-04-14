@@ -1,0 +1,59 @@
+ {
+  $jsonSchema: {
+    bsonType: 'object',
+    required: [
+      'corridas',
+      'nota'
+    ],
+    properties: {
+      corridas: {
+        bsonType: 'array',
+        description: 'Array obrigatório.',
+        items: {
+          bsonType: 'object',
+          required: [
+            'nota',
+            'distancia',
+            'valor',
+            'passageiro'
+          ],
+          properties: {
+            nota: {
+              bsonType: 'int',
+              description: 'Int obrigatório.'
+            },
+            distancia: {
+              bsonType: 'double',
+              description: 'Double obrigatório.'
+            },
+            valor: {
+              bsonType: 'double',
+              description: 'Double obrigatório.'
+            },
+            passageiro: {
+              bsonType: 'object',
+              required: [
+                'nome',
+                'documento'
+              ],
+              properties: {
+                nome: {
+                  bsonType: 'string',
+                  description: 'Int obrigatório.'
+                },
+                documento: {
+                  bsonType: 'string',
+                  description: 'Int obrigatório.'
+                }
+              }
+            }
+          }
+        }
+      },
+      nota: {
+        bsonType: 'int',
+        description: 'Int obrigatório.'
+      }
+    }
+  }
+}
